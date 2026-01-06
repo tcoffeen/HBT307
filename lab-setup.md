@@ -15,7 +15,7 @@ Node Images in use:
 
 Static configurations are in the [configs](configs) directory.
 
-![Lab Topology](../HBT307/Lab%20Topology.png)
+![Lab Topology](Lab%20Topology.png)
 
 ## Linux Recommendations
 
