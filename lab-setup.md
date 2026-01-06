@@ -34,6 +34,8 @@ Below are some helpful links for running Linux locally (with options for virtual
   
   Download: https://ubuntu.com/download/server
 
+  Documentation: https://help.ubuntu.com
+
 - **Red Hat Enterprise Linux**
 
   Download: https://developers.redhat.com/products/rhel/download
