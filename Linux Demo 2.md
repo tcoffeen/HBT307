@@ -1,4 +1,4 @@
-# Demo 2 - View IPv6 Network Configuration for Debian Server
+# Linux Demo 2
 
 ## View IPv6 network configuration in Debian server 
 

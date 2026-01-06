@@ -1,4 +1,4 @@
-# Demo 1 - View IPv6 and IPv4 Addresses
+# Linux Demo 1
 
 ## View IPv6 and IPv4 addresses configured on the interface in Linux with the `ip address show` command
 
