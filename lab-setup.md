@@ -24,23 +24,23 @@ Though there is no formal lab with this course, some demos may present the oppor
 Below are some helpful links for running Linux locally (with options for virtualization).
 
 
-- Debian Server
+- **Debian Server**
   
   Debian download: https://www.debian.org/distrib/
 
   Debian Installation Guide: https://www.debian.org/releases/bookworm/amd64/index.en.html
 
-- Ubuntu Server
+- **Ubuntu Server**
   
   Download: https://ubuntu.com/download/server
 
-- Red Hat Enterprise Linux
+- **Red Hat Enterprise Linux**
 
   Download: https://developers.redhat.com/products/rhel/download
 
   Documentation: https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10
 
-- CentOS Stream
+- **CentOS Stream**
 
   Download: https://www.centos.org/download/
 
