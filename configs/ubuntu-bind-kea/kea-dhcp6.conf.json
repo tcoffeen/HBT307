@@ -6,7 +6,7 @@
     },
     "lease-database": {
       "type": "memfile",
-      "persist": true,
+      "persist": true
 //    "name": "/tmp/dhcp6.leases"
     },
     "valid-lifetime": 28800,
