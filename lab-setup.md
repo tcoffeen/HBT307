@@ -19,15 +19,15 @@ Static configurations are in the [configs](configs) directory.
 
 ## Linux Recommendations
 
-Here are some suggestions for running Linux instances.
+Though there is no formal lab with this course, some demos may present the opportunity to try out some commands and configuration – in particular, for the various demos for different Linux platforms. 
+
+Below are some helpful links for running Linux locally (with options for virtualization).
+
 
 - Debian Server
-
-> Note: To run Debian Server deselect all desktops during installation. 
-
-Debian download: https://www.debian.org/distrib/
-
-Debian Installation Guide: https://www.debian.org/releases/bookworm/amd64/index.en.html
+  
+  Debian download: https://www.debian.org/distrib/ \
+  Debian Installation Guide: https://www.debian.org/releases/bookworm/amd64/index.en.html
 
 - Ubuntu Server
   
