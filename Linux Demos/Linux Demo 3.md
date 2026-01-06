@@ -1,12 +1,13 @@
 # Linux Demo 3
 
-## Add a static IPv6 address in Debian server 
+## Add a permanent static IPv6 address in Debian server 
 
-#### 1. Connect and login to the Debian server.
-a. Open the network configuration file with the `sudo vi /etc/network/interfaces` command; (if preferred, use `sudo nano /etc/network/interfaces`). \
-b. Add static IPv6 configuration (see Example 1) and save the file. \
-c. Reboot the system with the command `sudo reboot` (Note: Restarting networking with the `systemctl restart networking` command or disabling and reenabling the interface with `ip link set ens3 down ; ip link set ens3 up` will not remove the dynamically learned IPv6 addresses.)\
-d. Verify that the static IPv6 address has been added to the interface (`ip -6 a s`) 
+1. Connect and login to the Debian server.
+2. Observe the current interface configuration with the `ip -6 address show` command.
+3. Open the network configuration file with the `sudo vi /etc/network/interfaces` command; (if preferred, use `sudo nano /etc/network/interfaces`).
+4. Add static IPv6 configuration (see Example 1) and save the file.
+5. Reboot the system with the command `sudo reboot` (Note: Restarting networking with the `systemctl restart networking` command or disabling and reenabling the interface with `ip link set ens3 down ; ip link set ens3 up` will not remove the dynamically learned IPv6 addresses.)
+6. Verify that the static IPv6 address has been added to the interface (`ip -6 a s`) 
 
 #### Example 1:
 

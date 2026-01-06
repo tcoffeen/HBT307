@@ -2,11 +2,11 @@
 
 ## View IPv6 and IPv4 addresses configured on the interface in Linux with the `ip address show` command
 
-#### 1. Connect and login to a dual-stack Linux node.
-a. In the console or terminal type the `ip address show` (can be abbreviated to `ip a s`) command and view the results. To view only the IPv6 addresses use `ip -6 address show`. \
-b. What is the source of the various configured IP addresses (DHCP, DHCPv6, SLAAC, etc.)? \
-c. What are the IPv6 address types configured (GUA, Link-local, etc)? \
-d. What are the configured IPv6 address Interface Identifier (IID) types (EUI-64, temporary/random, DHCPv6 pool, etc.)?
+1. Connect and login to a dual-stack Linux node.
+2. In the console or terminal type the `ip address show` (can be abbreviated to `ip a s`) command and view the results. To view only the IPv6 addresses use `ip -6 address show`.
+3. What is the source of the various configured IP addresses (DHCP, DHCPv6, SLAAC, etc.)?
+4. What are the IPv6 address types configured (GUA, Link-local, etc)?
+5. What are the configured IPv6 address Interface Identifier (IID) types (EUI-64, temporary/random, DHCPv6 pool, etc.)?
 
 #### Example 1 (Debian-13):
 

@@ -2,8 +2,8 @@
 
 ## View IPv6 network configuration in Debian server 
 
-#### 1. Connect and login to the Debian server.
-a. View the network configuration file with the `cat /etc/network/interfaces` command.
+1. Connect and login to the Debian server.
+2. View the network configuration file with the `cat /etc/network/interfaces` command.
 
 #### Example 1:
 
