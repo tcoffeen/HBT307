@@ -6,9 +6,8 @@
 2. Observe the current interface configuration with the `ip -6 address show` command.
 3. Open the network configuration file with the `sudo vi /etc/netplan/50-cloud-init.yaml` command; (if preferred, use `sudo nano /etc/netplan/50-cloud-init.yaml`).
 4. Add static IPv6 configuration (see Example 1) and save the file.
-5. Apply the configuration changes with the command Reboot the system with the command `sudo reboot` (Note: Restarting networking with the `systemctl restart systemd-networkd` command or disabling and reenabling the interface with `ip link set ens3 down ; ip link set ens3 up` will not remove the dynamically learned IPv6 addresses.)
-6. Apply the configuration changes with the command `sudo netplan apply`
-7. Verify that the static IPv6 address has been added to the interface (`ip -6 a s`) 
+5. Apply the configuration changes with the command `sudo netplan apply`
+6. Verify that the static IPv6 address has been added to the interface (`ip -6 a s`) 
 
 #### Example 1:
 
