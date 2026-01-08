@@ -1,6 +1,6 @@
 # Linux Demo 6
 
-## Review IPv6 Configuration Options with a RHEL Desktop Instance 
+## Review GUI IPv6 Configuration Options in a RHEL Desktop Instance 
 
 1. Connect and login to the RHEL desktop.
 2. Open the **Settings** application and select **Network**.
