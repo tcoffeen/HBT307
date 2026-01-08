@@ -82,3 +82,67 @@ Temporary license is installed.
 
 System will RESTART shortly. Wait for RESTART completion and perform the required additional configuration
 ```
+
+5. Review the defaul network settings with the `show network` command.
+
+```console
+Infoblox > show network
+Current LAN1 Network Settings:
+  IPv4 Address:               192.168.1.2
+  Network Mask:               255.255.255.0
+  Gateway Address:            192.168.1.1
+  VLAN Tag:                   Untagged
+  HA enabled:                 false
+  Grid Status:                Master of Infoblox Grid
+
+Note: Additional addresses configured can be viewed through "show interface" command
+```
+
+6. Reconfigure the network settings with the `set network` command.
+
+```console
+Infoblox > set network
+NOTICE: All HA configuration is performed from the GUI.  This interface is
+        used only to configure a standalone node or to join a Grid.
+Enter IP address: 192.168.50.253
+Enter netmask [Default: 255.255.255.0]:
+Enter gateway address [Default: 192.168.50.1]:
+Enter VLAN tag [Default: Untagged]:
+Configure IPv6 network settings? (y or n): y
+Enter IPv6 address [Default: none]: 3fff:1d00:3001:1d32::253
+Enter IPv6 Prefix Length [Default: none]: 64
+Enter IPv6 gateway [Default: none]: automatic
+Enter VLAN tag [Default: Untagged]:
+Become grid member? (y or n): n
+
+ New Network Settings:
+  IPv4 address:         192.168.50.253
+  IPv4 Netmask:         255.255.255.0
+  IPv4 Gateway address: 192.168.50.1
+  IPv4 VLAN tag:        Untagged
+
+  IPv6 address:         3fff:1d00:3001:1d32::253/64
+  IPv6 Gateway address: automatic
+  IPv6 VLAN tag:        Untagged
+
+ Old IPv4 Network Settings:
+  IPv4 address:         192.168.1.2
+  IPv4 Netmask:         255.255.255.0
+  IPv4 Gateway address: 192.168.1.1
+  IPv4 VLAN tag:        Untagged
+        Is this correct? (y or n): y
+        Are you sure? (y or n): y
+Network settings have been updated.
+[2026/01/08 22:32:36.854] System restart...
+```
+7. Once NIOS has restarted, login to the web UI to finish setting up the system. If you connect to the web UI via its IPv6 address don't forget to put the address in brackets! 
+
+![NIOS Web UI Login](../images/NIOS_webUI_login.png)
+
+8. Accept the EULA by selecting 'I Accept'.
+
+![NIOS Web UI EULA](../images/NIOS_webUI_EULA.png)
+
+9. Complete the Grid Setup Wizard that appears after successful login. For the single lab/testing instance of vNIOS we are running, we choose the **Configure a Grid Master** option (then select **Next**).
+
+![NIOS Grid Setup Wizard](../images/NIOS_Grid_Wizard.png)
