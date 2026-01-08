@@ -23,3 +23,5 @@
      - Shared to other devices
    - **DNS**
    - **Routes**   
+
+![RHEL GUI IPv6](../images/RHEL_GUI_IPv6.png)
