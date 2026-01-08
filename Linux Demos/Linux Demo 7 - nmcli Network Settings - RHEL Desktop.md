@@ -37,7 +37,23 @@ ipv6.ignore-auto-dns
 [root@RHEL-10 user]# nmcli connection show ens3 | grep ipv6.addresses
 ipv6.addresses:                         3fff:1d00:3001:1d33::100/64
 ```
+8. Apply the change with the command `nmcli connection up ens3` and confirm with `ip -6 a s`
 
-
-8. Apply the change with the command `nmcli connection up ens3`
-
+```console
+[user@RHEL-10 ~]$ ip -6 a s
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1000
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: ens3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP qlen 1000
+    inet6 3fff:1d00:3001:1d33::100/64 scope global noprefixroute
+       valid_lft forever preferred_lft forever
+    inet6 3fff:1d00:3001:1d33::13/128 scope global dynamic noprefixroute
+       valid_lft 42907sec preferred_lft 26707sec
+    inet6 3fff:1d00:3001:1d33:a2be:6a17:f5c4:b630/64 scope global temporary dynamic
+       valid_lft 604506sec preferred_lft 14196sec
+    inet6 3fff:1d00:3001:1d33:f1eb:905e:c405:8beb/64 scope global dynamic mngtmpaddr noprefixroute
+       valid_lft 2591796sec preferred_lft 14196sec
+    inet6 fe80::ec77:7a7a:f10d:b7b7/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+```
+**Note:** Addresses added with this method will persist across reboots.
