@@ -135,7 +135,7 @@ Become grid member? (y or n): n
 Network settings have been updated.
 [2026/01/08 22:32:36.854] System restart...
 ```
-7. Once NIOS has restarted, login to the web UI to finish setting up the system. If you connect to the web UI via its IPv6 address don't forget to put the address in brackets! 
+1. Once NIOS has restarted, login to the web UI to finish setting up the system. If connecting to the web UI via its IPv6 address, don't forget to put the address in brackets! 
 
 ![NIOS Web UI Login](../images/NIOS_webUI_login.png)
 
@@ -143,6 +143,14 @@ Network settings have been updated.
 
 ![NIOS Web UI EULA](../images/NIOS_webUI_EULA.png)
 
-9. Complete the Grid Setup Wizard that appears after successful login. For the single lab/testing instance of vNIOS we are running, we choose the **Configure a Grid Master** option (then select **Next**).
+9. Complete the Grid Setup Wizard that appears after successful login. For the single lab/testing instance of vNIOS we are running, we choose the **Configure a Grid Master** option for Step 1 (then select **Next**).
 
 ![NIOS Grid Setup Wizard](../images/NIOS_Grid_Wizard.png)
+
+10. The default settings for Step 2 can be kept. Make sure that for **Type of Network Connectivity** either **IPv6** or **IPv4 and IPv6** are selected (depening on the desired configuration for testing).
+
+![NIOS Grid Setup Wizard Step 2](../images/NIOS_Grid_Wizard_Step2.png)
+
+11.  Verify the network settings for Step 3.
+
+![NIOS Grid Setup Wizard Step 3](../images/NIOS_Grid_Wizard_Step3.png)
