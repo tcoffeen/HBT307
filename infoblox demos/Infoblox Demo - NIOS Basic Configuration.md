@@ -154,3 +154,5 @@ Network settings have been updated.
 11.  Verify the network settings for Step 3.
 
 ![NIOS Grid Setup Wizard Step 3](../images/NIOS_Grid_Wizard_Step3.png)
+
+12.  Step 4 of the wizard permits a change to the admin password and Step 5 permits changes to the time/date and timezone settings if desired. Review and verify the settings in Step 6 then select **Finish** at which point basic configuration is complete and NIOS will restart.
