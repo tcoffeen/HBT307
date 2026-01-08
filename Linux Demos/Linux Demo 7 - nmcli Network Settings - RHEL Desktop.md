@@ -31,3 +31,13 @@ ipv6.ignore-auto-dns
 [user@RHEL-10 ~]$ nmcli connection modify ens3 ipv6.
 ``` 
 6. Add a static IPv6 address with the command `nmcli connection modify ens3 ipv6.addresses "3fff:1d00:3001:1d33::100/64"`
+7. Confirm the modification with the command `nmcli connection show ens3 | grep ipv6.addresses`
+
+```console
+[root@RHEL-10 user]# nmcli connection show ens3 | grep ipv6.addresses
+ipv6.addresses:                         3fff:1d00:3001:1d33::100/64
+```
+
+
+8. Apply the change with the command `nmcli connection up ens3`
+
