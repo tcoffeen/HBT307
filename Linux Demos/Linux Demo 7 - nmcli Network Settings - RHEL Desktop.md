@@ -4,7 +4,7 @@
 
 1. Connect and login to the RHEL desktop.
 2. Open **Terminal**.
-3. Run the `ip -6 address show` command and observe the existing IPv6 configuration.
+3. Run the `ip -6 address show ens3` command and observe the existing IPv6 configuration.
 4. Without hitting enter, type the command `nmcli connection modify ens3 ipv6.`
 5. Hit the tab key twice for context sensitive help to display all of the IPv6 configuration options available for the interface.
 
@@ -37,13 +37,10 @@ ipv6.ignore-auto-dns
 [root@RHEL-10 user]# nmcli connection show ens3 | grep ipv6.addresses
 ipv6.addresses:                         3fff:1d00:3001:1d33::100/64
 ```
-8. Apply the change with the command `nmcli connection up ens3` and confirm with `ip -6 a s`
+8. Apply the change with the command `nmcli connection up ens3` and confirm with `ip -6 a s ens3`
 
 ```console
-[user@RHEL-10 ~]$ ip -6 a s
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1000
-    inet6 ::1/128 scope host noprefixroute
-       valid_lft forever preferred_lft forever
+[user@RHEL-10 ~]$ ip -6 a s ens3
 2: ens3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP qlen 1000
     inet6 3fff:1d00:3001:1d33::100/64 scope global noprefixroute
        valid_lft forever preferred_lft forever
