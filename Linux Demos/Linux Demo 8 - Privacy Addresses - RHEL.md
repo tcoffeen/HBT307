@@ -27,7 +27,7 @@
    - The ::100 address is the static address manually configured from a previous lab.
    - The address configured with a /128 CIDR length is provided by DHCPv6. 
    - The **temporary** IPv6 address is labeled as such. This address has a randomized IID which will change periodically (based on the valid and preferred lifetime) and upon reboot.
-   - The address labeled with **mngtmpaddr** is a stable SLAAC address (as defined by RFC 7217). It also has a randomized IID, but one that will persist across reboots.
+   - The next address is a stable SLAAC address (as defined by RFC 7217). It also has a randomized IID, but one that will persist across reboots.
 
 5. It may be undesirable operationally to keep the dynamically configured IPv6 addresses on a server once a static address has been defined. Generally this *static-only* operational model would be configured on the router/default gateway by modifying the Router Advertisements to set the A, M, and O flags to 0 and disable dynamic addressing for the entire segment.
    
