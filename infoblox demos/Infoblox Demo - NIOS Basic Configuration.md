@@ -2,7 +2,7 @@
 
 ## Configure the basic settings for a new instance of Infoblox NIOS 
 
-1. Power up a new, unconfigured instance of Infoblox NIOS. Once it has finished booting, login at the prompt with the username `admin` and the password `infoblox`
+1. Power up a new, unconfigured instance of Infoblox NIOS. Once it has finished booting, login at the prompt with the username `admin` and the password `infoblox`.
 
 ```console
 Disconnect NOW if you have not been expressly authorized to use this system.
