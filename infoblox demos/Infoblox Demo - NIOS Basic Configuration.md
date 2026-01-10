@@ -135,7 +135,7 @@ Become grid member? (y or n): n
 Network settings have been updated.
 [2026/01/08 22:32:36.854] System restart...
 ```
-1. Once NIOS has restarted, login to the web UI to finish setting up the system. If connecting to the web UI via its IPv6 address, don't forget to put the address in brackets! 
+7. Once NIOS has restarted, login to the web UI to finish setting up the system. If connecting to the web UI via its IPv6 address, don't forget to put the address in brackets! 
 
 ![NIOS Web UI Login](../images/NIOS_webUI_login.png)
 
