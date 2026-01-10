@@ -18,6 +18,10 @@
 
 ![NIOS Web UI Dashboard](../images/NIOS_webUI_dashboard_grid_mgr_prop.png)
 
-5. Observe the options for the type of network connectivity. In most deployments, **IPv4 and IPv6** will be the desired choice. Note also the existing IPv6 and IPv4 addressing and gateways from earlier, initial CLI configuration of NIOS.
+5. Observe the options for the type of network connectivity. In most deployments, **IPv4 and IPv6** will be the desired choice. Note also the existing IPv6 and IPv4 addressing and gateways from the earlier, initial CLI configuration of NIOS.
 
 ![NIOS Web UI Dashboard](../images/NIOS_webUI_dashboard_grid_mgr_prop_net.png)
+
+6. Scroll down to **Communication Protocol Settings and Preferences** and observe that IPv6 and IPv4 are transport options for the Grid services listed under **Customized Settings**. Note that these features offer IPv6 feature parity with IPv4 and permit enhanced Infoblox grid function in an IPv6-only environment.
+
+![NIOS Web UI Dashboard](../images/NIOS_webUI_dashboard_grid_mgr_prop_net2.png)
