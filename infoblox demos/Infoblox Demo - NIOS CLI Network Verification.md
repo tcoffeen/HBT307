@@ -105,3 +105,14 @@ rtt min/avg/max/mdev = 0.372/0.509/0.795/0.154 ms
 Infoblox >
 ```
 Note that because there is only the LAN1 interface configured with IPv6, no outgoing interface interface is specified or needed for the link-local ping.
+
+6. Observe the IPv6 neighbor discovery cache with the command `show ipv6_neighbor lan1`.
+
+```console
+Infoblox > show ipv6_neighbor lan1
+3fff:1d00:3001:1d32::80 lladdr 50:00:00:0b:00:00 STALE
+fe80::5200:ff:fe06:1  FAILED
+fe80::5200:ff:fe02:1 lladdr 50:00:00:02:00:01 router STALE
+fe80::5200:ff:fe0b:0 lladdr 50:00:00:0b:00:00 STALE
+Infoblox >
+```
