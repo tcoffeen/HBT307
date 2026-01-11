@@ -27,4 +27,4 @@
 6. Click **Save & Close** and restart the service.
 
 ![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
-
+ 
