@@ -142,4 +142,6 @@ user@ubuntu-24:~$ dig -x 3fff:1d00:3001:1d32::53
 
     `dig A www.hexabuild.net @3fff:1d00:3001:1d32::53`
 
+    `dig A www.hexabuild.net @1.1.1.1`
+
     `dig AAAA github.com`
