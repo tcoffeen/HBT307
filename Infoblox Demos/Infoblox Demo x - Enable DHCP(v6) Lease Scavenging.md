@@ -20,6 +20,11 @@
 
 ![NIOS Web UI Lease Scavenging 3](../images/NIOS_webUI_lease_scavenging3.png)
 
-1. Verify that the configuration screen is for Infoblox (Grid DHCP Properties) then make sure *General* and *Advanced* are selected. Scroll down to *IPv6 Properties* and choose the lease scavenging duration (minimum of 6 hours) that fits the overall DHCPv6 operational model Click *Save & Close* and restart grid services.
+5. Verify that the configuration screen is for Infoblox (Grid DHCP Properties) then make sure *General* and *Advanced* are selected. Scroll down to *IPv6 Properties* and choose the lease scavenging duration (minimum of 6 hours) that fits the overall DHCPv6 operational model.
 
 ![NIOS Web UI Lease Scavenging 4](../images/NIOS_webUI_lease_scavenging4.png)
+
+6. Click **Save & Close** and restart the service.
+
+![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
+

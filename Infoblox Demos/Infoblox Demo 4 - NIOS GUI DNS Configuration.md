@@ -12,26 +12,26 @@
 
 3. The **Grid Manager** workspace appears. Verify that the **Services** tab is selected then check the box next to the grid member's name before clicking on the edit button.
 
-![NIOS Web UI Dashboard](../images/NIOS_webUI_grid_mgr_serv_DNS.png)
+![NIOS Web UI Grid Manager Services DNS](../images/NIOS_webUI_grid_mgr_serv_DNS.png)
 
 4. The **Member DNS Properties** screen appears. Verify that IPv6 (along with IPv4) is enabled for the LAN1 interface.
 
-![NIOS Web UI Dashboard](../images/NIOS_webUI_grid_mgr_serv_DNS_prop.png)
+![NIOS Web UI Grid Manager Services DNS Properties](../images/NIOS_webUI_grid_mgr_serv_DNS_prop.png)
 
    > In this lab example, the Infoblox nameserver is authoritative for only the hexabuild.net domain (and only within the confines of the lab network). The servers and clients are configured to use IPv4 and IPv6 addresses of infoblox.hexabuild.net as the only recursive DNS server. As a result, the nameserver needs to have forwarders configured to facilitate name resolution for Internet domain names.
 
 5. To configure DNS forwarders, return to the *Grid -> Grid Manager -> Services* screen, click the service checkbox, then click **Edit** in the Toolbar on the right.
 
-![NIOS Web UI Dashboard](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop.png)
+![NIOS Web UI Grid Manager Services DNS Grid Properties](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop.png)
 
 6. Note that two Internet-based external forwarders are already configured (provided by the open DNS service Quad9 in this instance).
 
-![NIOS Web UI Dashboard](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop2.png)
+![NIOS Web UI Grid Manager Services DNS Grid Properties 2](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop2.png)
 
 7. To add an additional forwarder, click the plus sign in the uppper right hand corner, then enter the IPv6 (or IPv4) address of the forwarder in the indicated field. (In this example, the IPv6 address for a Cloudflare DNS nameserver is used.) 
 
-![NIOS Web UI Dashboard](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop3.png)
+![NIOS Web UI Grid Manager Services DNS Grid Properties 3](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop3.png)
 
 8. Click **Save & Close** and restart the service.
 
-![NIOS Web UI Dashboard](../images/NIOS_webUI_services_restart.png)
+![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
