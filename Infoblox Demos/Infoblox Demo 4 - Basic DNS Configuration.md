@@ -1,6 +1,6 @@
 # Infoblox Demo
 
-## IPv6 DNS Configuration in Infoblox NIOS 
+## IPv6 Basic DNS Configuration in Infoblox NIOS 
 
 1. Login to the web UI. 
 

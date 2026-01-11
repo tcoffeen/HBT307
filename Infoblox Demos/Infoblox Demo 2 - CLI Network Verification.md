@@ -1,6 +1,6 @@
 # Infoblox Demo
 
-## Verify NIOS Network Settings using the CLI 
+## Verify NIOS network settings using the CLI 
 
 1. Connect to the Infoblox NIOS console and login at the prompt with the username `admin` and the password `infoblox`
 
