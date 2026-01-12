@@ -18,7 +18,7 @@
 
 ![NIOS Web UI Data Management DNS Zone hexabuild.net Records](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records.png)
 
-5. To add a resource record click on the triangle next to the plus icon and select the record type to be added. For this example, an additional AAAA record will be added to map the secondary DNS nameserver `ns2.hexabuild.net` to the IPv6 address of `3fff:1d00:3001:1d32::153`
+5. To add a resource record, click on the triangle next to the plus icon and select the record type to be added. For this example, an additional AAAA record will be added to map the secondary DNS nameserver `ns2.hexabuild.net` to the IPv6 address of `3fff:1d00:3001:1d32::153`
 
 ![NIOS Web UI Data Management Zone hexabuild.net Records Add](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records2.png)
 
