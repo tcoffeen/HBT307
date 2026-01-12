@@ -14,7 +14,7 @@
 
 ![NIOS Web UI Data Management DNS Zone hexabuild.net](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net.png)
 
-4. Observe the list of resource records of differing types for the selected zone. Note that the forward mapping zone can contain both A (IPv4) and AAAA (IPv6) records.
+1. Observe the list of resource records of differing types for the selected zone. Note that forward mapping zones can contain both A (IPv4) and AAAA (IPv6) records.
 
 ![NIOS Web UI Data Management DNS Zone hexabuild.net Records](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records.png)
 
