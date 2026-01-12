@@ -34,6 +34,6 @@
 
 ![NIOS Web UI Data Management DNS Zones hexabuild.net Show Filter](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_filter.png)
 
-9. Configure the filter by choosing *Record Source* for the first field. The operator should be *equals*, then select *Dynamic* for the third field. Click **Apply** then observe the three IPv6 leases below for which DNS has been dynamically updated with learned hostnames.
+9. Configure the filter by choosing *Record Source* for the first field. The operator should be *equals*, then select *Dynamic* for the third field. Click **Apply** then observe the three IPv6 leases below for which DNS has been dynamically updated with learned hostnames for the hexabuild.net forward zone.
 
 ![NIOS Web UI Data Management DNS Zones hexabuild.net Show Filter 2](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_filter2.png)

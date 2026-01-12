@@ -24,7 +24,7 @@
 
 ![NIOS Web UI Lease Scavenging 4](../images/NIOS_webUI_lease_scavenging4.png)
 
-6. Click **Save & Close** and restart the service.
+6. Click **Save & Close** and restart the service. Leases will now be scavenged according to the configured settings.
 
 ![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
  
