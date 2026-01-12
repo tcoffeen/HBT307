@@ -28,10 +28,10 @@
 
 ![NIOS Web UI Grid Manager Services DNS Grid Properties 2](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop2.png)
 
-7. To add an additional forwarder, click the plus sign in the uppper right hand corner, then enter the IPv6 (or IPv4) address of the forwarder in the indicated field. (In this example, the IPv6 address for a Cloudflare DNS nameserver is used.) 
+7. To add an additional forwarder, click the plus sign in the uppper right hand corner, then enter the IPv6 (or IPv4) address of the forwarder in the indicated field. (In this example, the IPv6 address for a Cloudflare DNS nameserver is used.) Click **Save & Close**.
 
 ![NIOS Web UI Grid Manager Services DNS Grid Properties 3](../images/NIOS_webUI_grid_mgr_serv_DNS_grid_prop3.png)
 
-8. Click **Save & Close** and restart the service.
+8. Restart the service.
 
 ![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
