@@ -32,7 +32,7 @@
 
 8. (Optional) Create a bookmark in the Finder bar on the left side of the screen to be able to quickly navigate back to the **hexabuild.net** foward zone for future additions or changes.
 
-![NIOS Web UI Data Management Zone hexabuild.net Records Add](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_bookmark.png)
+![NIOS Web UI Data Management Zone hexabuild.net Bookmark](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_bookmark.png)
 
 
 9. The new AAAA record can also be validated by using the `dig` command on one of the host nodes.
