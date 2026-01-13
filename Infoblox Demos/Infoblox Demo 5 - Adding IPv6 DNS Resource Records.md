@@ -30,7 +30,12 @@
 
 ![NIOS Web UI Data Management Zone hexabuild.net Records Add](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records4.png)
 
-8. The new AAAA record can also be validated by using the `dig` command on one of the host nodes.
+8. (Optional) Create a bookmark in the Finder bar on the left side of the screen to be able to quickly navigate back to the **hexabuild.net** foward zone for future additions or changes.
+
+![NIOS Web UI Data Management Zone hexabuild.net Records Add](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_bookmark.png)
+
+
+9. The new AAAA record can also be validated by using the `dig` command on one of the host nodes.
 
 ```console
 user@ubuntu-24:~$ dig AAAA ns2.hexabuild.net @ns1.hexabuild.net
