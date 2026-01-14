@@ -10,7 +10,7 @@
 
 ![NIOS Web UI Dashboard](../images/NIOS_webUI_dashboard_grid.png)
 
-3. The **Grid Manager** workspace appears. Verify that the **Services** tab is selected then check the box next to the grid member's name before clicking on the edit button.
+3. The **Grid Manager** workspace appears. Verify that the **Services** tab is selected for **DNS** then check the box next to the grid member's name before clicking on the edit button.
 
 ![NIOS Web UI Grid Manager Services DNS](../images/NIOS_webUI_grid_mgr_serv_DNS.png)
 
