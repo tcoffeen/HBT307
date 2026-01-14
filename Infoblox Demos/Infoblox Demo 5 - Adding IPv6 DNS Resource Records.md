@@ -2,40 +2,36 @@
 
 ## Adding IPv6 DNS Resource Records in Infoblox NIOS 
 
-1. Login to the web UI. 
-
-![NIOS Web UI Login](../images/NIOS_webUI_login_2.png)
-
-2. Navigate to *Data Management -> DNS -> Zones (default)* and observe the configured zones.
+1. After logging in to the GUI, navigate to *Data Management -> DNS -> Zones (default)* and observe the configured zones.
 
 ![NIOS Web UI Data Management DNS Zones](../images/NIOS_webUI_data_mgmt_DNS_zones.png)
 
-3. Select a zone to add resource records to. In this example, the authoritative **hexabuild.net** zone is selected by clicking on the hexabuild.net link from the list of zones.
+2. Select a zone to add resource records to. In this example, the authoritative **hexabuild.net** zone is selected by clicking on the hexabuild.net link from the list of zones.
 
 ![NIOS Web UI Data Management DNS Zone hexabuild.net](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net.png)
 
-4. Observe the list of resource records of differing types for the selected zone. Note that forward mapping zones can contain both A (IPv4) and AAAA (IPv6) records.
+3. Observe the list of resource records of differing types for the selected zone. Note that forward mapping zones can contain both A (IPv4) and AAAA (IPv6) records.
 
 ![NIOS Web UI Data Management DNS Zone hexabuild.net Records](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records.png)
 
-5. To add a resource record, click on the triangle next to the plus icon and select the record type to be added. For this example, an additional AAAA record will be added to map the secondary DNS nameserver `ns2.hexabuild.net` to the IPv6 address of `3fff:1d00:3001:1d32::153`
+4. To add a resource record, click on the triangle next to the plus icon and select the record type to be added. For this example, an additional AAAA record will be added to map the secondary DNS nameserver `ns2.hexabuild.net` to the IPv6 address of `3fff:1d00:3001:1d32::153`
 
 ![NIOS Web UI Data Management Zone hexabuild.net Records Add](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records2.png)
 
-6. Populate the *Name* and *IPv6 Address* fields with the desired values then click *Save & Close* 
+5. Populate the *Name* and *IPv6 Address* fields with the desired values then click *Save & Close* 
 
 ![NIOS Web UI Data Management Zone hexabuild.net Records Add](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records3.png)
 
-7. Verify that the new AAAA record for the hostname `ns2` appears in the records list along with the proper IPv6 address.
+6. Verify that the new AAAA record for the hostname `ns2` appears in the records list along with the proper IPv6 address.
 
 ![NIOS Web UI Data Management Zone hexabuild.net Records Add](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_records4.png)
 
-8. (Optional) Create a bookmark in the Finder bar on the left side of the screen to be able to quickly navigate back to the **hexabuild.net** foward zone for future additions or changes.
+7. (Optional) Create a bookmark in the Finder bar on the left side of the screen to be able to quickly navigate back to the **hexabuild.net** foward zone for future additions or changes.
 
 ![NIOS Web UI Data Management Zone hexabuild.net Bookmark](../images/NIOS_webUI_data_mgmt_DNS_zones_hb-net_bookmark.png)
 
 
-9. The new AAAA record can also be validated by using the `dig` command on one of the host nodes.
+8. The new AAAA record can also be validated by using the `dig` command on one of the host nodes.
 
 ```console
 user@ubuntu-24:~$ dig AAAA ns2.hexabuild.net @ns1.hexabuild.net

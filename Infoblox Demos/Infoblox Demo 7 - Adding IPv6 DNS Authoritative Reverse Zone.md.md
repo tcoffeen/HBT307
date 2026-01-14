@@ -2,51 +2,47 @@
 
 ## Adding an IPv6 DNS Authoritative Reverse Zone 
 
-1. Login to the web UI. 
-
-![NIOS Web UI Login](../images/NIOS_webUI_login_2.png)
-
-2. Navigate to *Data Management -> DNS -> Zones (default)* and observe the configured zones.
+1. After logging in to the GUI, navigate to *Data Management -> DNS -> Zones (default)* and observe the configured zones.
 
 ![NIOS Web UI Data Management DNS Zones](../images/NIOS_webUI_data_mgmt_DNS_zones.png)
 
-3. Click on the triangle next to the plus icon and select *Authoritative Zone*.
+2. Click on the triangle next to the plus icon and select *Authoritative Zone*.
 
 ![NIOS Web UI Data Management DNS Zones](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth.png)
 
-4. The **Add Authoritative Zone Wizard > Step 1 of 6** screen appears. Select *Add an authoritative reverse-mapping zone* then click **Next**.
+3. The **Add Authoritative Zone Wizard > Step 1 of 6** screen appears. Select *Add an authoritative reverse-mapping zone* then click **Next**.
 
 ![NIOS Web UI Data Management DNS Zones Add Authoritative Reverse](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth_rev.png)
 
-5. The **Add Authoritative Zone Wizard > Step 2 of 6** screen appears. In the *IPv6 Network Prefix* field, enter the prefix and length of the desired reverse zone. In this instance, `3fff:1d00:3001:1d33::/64` is added. Click **Next**.
+4. The **Add Authoritative Zone Wizard > Step 2 of 6** screen appears. In the *IPv6 Network Prefix* field, enter the prefix and length of the desired reverse zone. In this instance, `3fff:1d00:3001:1d33::/64` is added. Click **Next**.
 
 ![NIOS Web UI Data Management DNS Zones Add Authoritative Reverse 2](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth_rev2.png)
 
-6. The **Add Authoritative Zone Wizard > Step 3 of 6** screen appears. Select *Use this set of name servers* then click the triangle next to the plus icon and select *Grid Primary*. 
+5. The **Add Authoritative Zone Wizard > Step 3 of 6** screen appears. Select *Use this set of name servers* then click the triangle next to the plus icon and select *Grid Primary*. 
 
 ![NIOS Web UI Data Management DNS Zones Add Authoritative Reverse 3](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth_rev3.png)
 
-7. The **Add Grid Primary** screen appears. Click **Select**. The name of the Grid Primary appears (*infoblox.hexabuild.net*). Click **Add**.
+6. The **Add Grid Primary** screen appears. Click **Select**. The name of the Grid Primary appears (*infoblox.hexabuild.net*). Click **Add**.
 
 ![NIOS Web UI Data Management DNS Zones Add Authoritative Reverse 4](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth_rev4.png)
 
-8. Verify that the Grid Primary name server name and address have been added, then click **Save & Close**. 
+7. Verify that the Grid Primary name server name and address have been added, then click **Save & Close**. 
 
 ![NIOS Web UI Data Management DNS Zones Add Authoritative Reverse 5](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth_rev5.png)
 
-9. Restart the service.
+8. Restart the service.
 
 ![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
 
-10.  From the *Data Management -> DNS -> Zones (Default)* screen, observe the newly added authoritative reverse zone for `3fff:1d00:3001:1d33::/64` which appears as `3.3.d.1.1.0.0.3.0.0.d.1.f.f.f.3.ipv6.arpa`. Note that NIOS has done the tricky work of reversing the prefix characters to properly name the reverse mapping zone. Click on the link to the zone to open it.
+9.  From the *Data Management -> DNS -> Zones (Default)* screen, observe the newly added authoritative reverse zone for `3fff:1d00:3001:1d33::/64` which appears as `3.3.d.1.1.0.0.3.0.0.d.1.f.f.f.3.ipv6.arpa`. Note that NIOS has done the tricky work of reversing the prefix characters to properly name the reverse mapping zone. Click on the link to the zone to open it.
 
 ![NIOS Web UI Data Management DNS Zones Add Authoritative Reverse 6](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth_rev6.png)
 
-11.  The reverse zone records for `3.3.d.1.1.0.0.3.0.0.d.1.f.f.f.3.ipv6.arpa` are displayed. In this example, a reverse pointer record (PTR) is shown for the dynamically learned host `ubuntu-24` mapped to `f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0` for the lower 64 bits of the address derived from the IPv6 prefix. 
+10.  The reverse zone records for `3.3.d.1.1.0.0.3.0.0.d.1.f.f.f.3.ipv6.arpa` are displayed. In this example, a reverse pointer record (PTR) is shown for the dynamically learned host `ubuntu-24` mapped to `f.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0` for the lower 64 bits of the address derived from the IPv6 prefix. 
 
 ![NIOS Web UI Data Management DNS Zones Add Authoritative Reverse 7](../images/NIOS_webUI_data_mgmt_DNS_zones_add_auth_rev7.png)
 
-12.  For additional verification of the new zone and any reverse records, use the `dig -x` command and argument. For example, `dig -x 3fff:1d00:3001:1d33::1f @infoblox.hexabuild.net`.
+11.  For additional verification of the new zone and any reverse records, use the `dig -x` command and argument. For example, `dig -x 3fff:1d00:3001:1d33::1f @infoblox.hexabuild.net`.
 
 ```console
 user@debian-13:~$ dig -x 3fff:1d00:3001:1d33::1f @infoblox.hexabuild.net
