@@ -99,3 +99,14 @@ vyos@R2#
 
 4. The configuration for the dual-stack VLAN 51 Router Advertisement can be modified to include a nameserver address with the Vyos command `set service router-advert interface eth1 name-server <IPv6-address>`
 
+```console
+vyos@R2# set service router-advert interface eth1 name-server 3fff:1d00:3001:1d32::153
+[edit]
+vyos@R2# commit
+[edit]
+vyos@R2#
+```
+
+5. With Wireshark capturing traffic on R2's eth1 interface (facing the VLAN51 dual-stack segment), a Router Advertisement containing the newly-configured recursive DNS server (RDNSS) IPv6 address can be observed.
+
+![Wireshark RA RDNSS Capture](../images/Wireshark_RA_RDNSS.png)
