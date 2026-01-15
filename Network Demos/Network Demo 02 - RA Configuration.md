@@ -97,7 +97,7 @@ vyos@R2# show service router-advert
 vyos@R2#
 ```
 
-4. The configuration for the dual-stack VLAN 51 Router Advertisement can be modified to include a nameserver address with the Vyos command `set service router-advert interface eth1 name-server <IPv6-address>`
+4. The configuration for the dual-stack VLAN 51 Router Advertisement can be modified to include a nameserver address with the Vyos command `set service router-advert interface eth1 name-server <IPv6-address>`.
 
 ```console
 vyos@R2# set service router-advert interface eth1 name-server 3fff:1d00:3001:1d32::153
@@ -110,3 +110,20 @@ vyos@R2#
 5. With Wireshark capturing traffic on R2's eth1 interface (facing the VLAN51 dual-stack segment), a Router Advertisement containing the newly-configured recursive DNS server (RDNSS) IPv6 address can be observed.
 
 ![Wireshark RA RDNSS Capture](../images/Wireshark_RA_RDNSS.png)
+
+6. Login to the Ubuntu-24 node in VLAN 51 and run the command `resolvectl` to view the DNS servers the node has configured. Note the presence of the address of the DNS server learned via SLAAC and RDNSS.
+
+```console
+user@ubuntu-24:~$ resolvectl
+Global
+         Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+  resolv.conf mode: stub
+
+Link 2 (ens3)
+    Current Scopes: DNS
+         Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 192.168.50.53
+       DNS Servers: 192.168.50.53 3fff:1d00:3001:1d32::53 3fff:1d00:3001:1d32::153
+        DNS Domain: hexabuild.net
+user@ubuntu-24:~$
+```
