@@ -26,7 +26,7 @@
 
 ![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
 
-7. The newly-added DHCPv6 range can be validated as properly configured by checking an IPv6 node on the segment configured with the IPv6 prefix the DHCPv6 range is in. In this example, a Ubuntu-24 server has received the DHCPv6 address `3fff:1d00:3001:1d34::1f::/128`. The IID of `::1f` falling within the configured DHCPv6 range along with the /128 CIDR length both indicate that the assignment is via DHCPv6.
+7. The newly-added DHCPv6 range can be validated as properly configured by checking an IPv6 node on the segment configured with the IPv6 prefix the DHCPv6 range is in. In this example, a Ubuntu-24 server has received the DHCPv6 address `3fff:1d00:3001:1d34::1f/128`. The IID of `::1f` falling within the configured DHCPv6 range along with the /128 CIDR length both indicate that the assignment is via DHCPv6.
 
 ```console
 user@ubuntu-24:~$ ip -6 address show dev ens3
@@ -40,3 +40,11 @@ user@ubuntu-24:~$ ip -6 address show dev ens3
        valid_lft forever preferred_lft forever
 user@ubuntu-24:~$
 ```
+
+8. Additional verification can be accomplished via the NIOS web UI. Navigate to *Data Management -> DHCP -> Leases -> Current Leases* to view the existing/new DHCPv6 leases. In this example, the lease for `3fff:1d00:3001:1d34::1f` is shown along with the additional lease information.
+
+![NIOS Web UI Data Management DHCP Leases Current ](../images/NIOS_webUI_data_mgmt_DHCP_leases_current.png)
+
+9. For more detail, select the desired lease and click on the *Lease Details* icon. The resulting screen provides additional information for the selected lease.
+
+![NIOS Web UI Data Management DHCP Leases Current ](../images/NIOS_webUI_data_mgmt_DHCP_leases_current2.png)
