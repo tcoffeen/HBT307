@@ -32,5 +32,16 @@
 
 8. On the **(Infoblox) Grid DHCP Properties** configuration panel that appears, select **IPv4 DHCP Options** in the left column, then scroll down to the **Custom DHCP Options** item.
    
-![NIOS Web UI Data Management DHCP Option Spaces 8](../images/NIOS_webUI_grid_DHCP_prop.png.png)
+![NIOS Web UI Grid DHCP Properties](../images/NIOS_webUI_grid_DHCP_prop.png)
 
+9. Click the **Custom DHCP Options** pull-down menu and select the desired option. In this example, *ipv6-mostly (108) 32-bit unsigned integer*.
+   
+![NIOS Web UI Grid DHCP Properties 2](../images/NIOS_webUI_grid_DHCP_prop2.png)
+
+10. The second field for **Custom DHCP Options** accepts a value associated with the configured option type. In this example, this is the number of seconds (1800 seconds, or 30 minutes) that DHCP will signal to the IPv6-mostly host not to configure an IPv4 lease. Click **Save & Close** and restart the service.
+   
+![NIOS Web UI Grid DHCP Properties 3](../images/NIOS_webUI_grid_DHCP_prop3.png)
+
+11. The proper configuration of the new DHCP option can be validated in different ways. In this example, a Wireshark packet capture of DHCP traffic to an IPv6-mostly host indicates the presence of DHCP Option 108 in the ACK from the DHCP server.
+
+![Wireshark DHCP Option 108](../images/Wireshark_DHCP_Option108.png)
