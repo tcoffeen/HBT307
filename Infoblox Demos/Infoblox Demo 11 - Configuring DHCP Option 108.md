@@ -42,6 +42,6 @@
    
 ![NIOS Web UI Grid DHCP Properties 3](../images/NIOS_webUI_grid_DHCP_prop3.png)
 
-11. The proper configuration of the new DHCP option can be validated in different ways. In this example, a Wireshark packet capture of DHCP traffic to an IPv6-mostly host indicates the presence of DHCP Option 108 in the ACK from the DHCP server.
+11. The proper configuration of the new DHCP option can be validated in different ways. In this example, a Wireshark packet capture of DHCP traffic to an IPv6-mostly host indicates the presence of DHCP Option 108 in the ACK from the DHCP server along with the configured type value.
 
 ![Wireshark DHCP Option 108](../images/Wireshark_DHCP_Option108.png)
