@@ -25,3 +25,18 @@
 6. Restart the service.
 
 ![NIOS Web UI Services Restart](../images/NIOS_webUI_services_restart.png)
+
+7. The newly-added DHCPv6 range can be validated as properly configured by checking an IPv6 node on the segment configured with the IPv6 prefix the DHCPv6 range is in. In this example, a Ubuntu-24 server has received the DHCPv6 address `3fff:1d00:3001:1d34::1f::/128`. The IID of `::1f` falling within the configured DHCPv6 range along with the /128 CIDR length both indicate that the assignment is via DHCPv6.
+
+```console
+user@ubuntu-24:~$ ip -6 address show dev ens3
+2: ens3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    altname enp0s3
+    inet6 3fff:1d00:3001:1d33::1f/128 scope global dynamic noprefixroute
+       valid_lft 27908sec preferred_lft 11708sec
+    inet6 3fff:1d00:3001:1d33:5200:ff:fe03:0/64 scope global dynamic mngtmpaddr noprefixroute
+       valid_lft 2591713sec preferred_lft 14113sec
+    inet6 fe80::5200:ff:fe03:0/64 scope link
+       valid_lft forever preferred_lft forever
+user@ubuntu-24:~$
+```
