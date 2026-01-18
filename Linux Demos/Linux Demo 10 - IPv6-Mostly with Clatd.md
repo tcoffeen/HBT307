@@ -23,11 +23,14 @@
 
    - Was the ping successful?
 
-5. Review the log for the clatd service by running the command `journalctl -u clatd.service`
+5. Traceroute to the same IPv4-only domain; e.g., `traceroute github.com`
+
+   - What is the address of the first hop?
+
+6. Review the log for the clatd service on the IPv6-mostly host by running the command `journalctl -u clatd.service`
 
    - How did clatd learn the NAT64 prefix?
    - What does Tayga do?
-
 
 ```console
 [user@CentOS-9-v6-m ~]$ journalctl -u clatd.service
