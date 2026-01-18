@@ -55,4 +55,3 @@ Jan 18 23:14:20 CentOS-9-v6-m tayga[2107]: TAYGA's IPv4 address: 192.0.0.2
 Jan 18 23:14:20 CentOS-9-v6-m tayga[2107]: TAYGA's IPv6 address: 2001:db8:3001:1dff::c000:2
 Jan 18 23:14:20 CentOS-9-v6-m tayga[2107]: NAT64 prefix: 2001:db8:3001:1dff::/96
 ```
-
