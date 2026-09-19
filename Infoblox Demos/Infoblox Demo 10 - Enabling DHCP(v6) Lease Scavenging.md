@@ -1,4 +1,4 @@
-# Linux Demo 10
+# Infoblox Demo 10
 
 ## Enabling DHCP(v6) lease scavenging
 
