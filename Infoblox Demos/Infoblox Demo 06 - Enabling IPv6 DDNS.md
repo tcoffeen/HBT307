@@ -1,4 +1,4 @@
-# Linux Demo 6
+# Infoblox Demo 6
 
 ## Enabling IPv6 DDNS
 
